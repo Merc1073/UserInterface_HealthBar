@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+
+    public Slider healthSlider;
+
+
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            healthSlider.value -= 5f;
+        }
+
+        else if(Input.GetKeyDown(KeyCode.T))
+        {
+            healthSlider.value += 20f;
+        }
     }
 }
